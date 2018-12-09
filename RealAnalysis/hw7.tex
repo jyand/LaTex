@@ -1,0 +1,27 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsmath}
+\begin{document}
+\pagestyle{plain}
+
+\title{Real Analysis: Homework \#7}
+\author{John DeSalvo}
+\maketitle
+
+\section{Problem 1}
+Let $g$ be positive and non-increasing on $[a, b)$ \\
+$g$ is bounded and locally integrable on $[a, b)$ with $0 < sup_{x \in [a, b)}(g(x)) < \infty$ since $g$ does not $\to \infty$ as $x \to \infty$ \\
+Therefore, the limit $lim_{c \to b^{-}} \int_{a}^{c}g(x)dx = \int_{a}^{b}g(x)dx$ exists and is finite \\
+Now suppose $\exists$ a proper or absolutely convergent improper integral $\int_{a}^{b}f(x)dx$ \\
+The limit $lim_{c \to b^{-}} \int_{a}^{c}f(x)dx = \int_{a}^{b}f(x)dx$ exists and is finite \\
+The integral $\int_{a}^{b}f(x)g(x)dx = (\int_{a}^{b}f(x)dx) (\int_{a}^{b}g(x)dx)$ exists since \\
+$(lim_{c \to b^{-}} \int_{a}^{c}f(x)dx) (lim_{c \to b^{-}} \int_{a}^{c}g(x)dx)$ \\
+exists and is finite via properties of limits 
+
+\section{8.d}
+$\int_{0}^{\infty}\frac{4+cos(x)}{(1+x) \sqrt{x}}dx$ = ($\int_{0}^{\infty}\frac{1}{x^{p}})(\int_{0}^{\infty}\frac{cos(x)+4}{1+x}dx)$ with $p = \frac{1}{2}$ \\
+$\int_{0}^{\infty}\frac{1}{x^{p}}$ diverges since $0 < p < 1$ \\
+$\int_{0}^{\infty}\frac{cos(x)+4}{1+x}dx = \frac{cos(x)+4}{1+x} + \int_{0}^{\infty}\frac{cos(x)+4}{(1+x)^{p}}dx$ with $p = \frac{1}{2}$ also diverges since $0 < p < 1$ \\
+Therefore, the product of these two divergent integrals $\int_{0}^{\infty}\frac{4+cos(x)}{(1+x) \sqrt{x}}dx$ also diverges 
+
+\end{document}

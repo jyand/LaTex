@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\begin{document}
+\pagestyle{plain}
+
+\title{Math 545: Real Analysis}
+\author{John DeSalvo}
+\maketitle
+
+\tableofcontents
+
+\section{Homework \#1}
+\subsection{1.1 \#3}
+Suppose $\sqrt{2} \in Q$ \\
+$\sqrt{2} = \frac{a}{b} s.t.$ $a, b \in Z$, $b \ne 0$ \\
+$2 = \frac{a^{2}}{b^{2}}$
+$2b^{2} = a^{2}$ \\
+$b^{2} = 2k$ , $k \in N$ \\
+$a^{2} = 2b^{2} = 4k$ , $k \in N$ \\
+if$\frac{a}{b} = 2k$ then $\exists \frac{c}{d}$ $c, d \in Z$ $d \ne 0$ $s.t.$ $c\ne kd$ and $d\ne kc$ where $k \in Z$ \\
+$\frac{c}{d}$ implies $c^{2} = 2d^{2}$ implies $\frac{c}{d} = 2k$ \\
+Thus we have a contradiction since $2 \in Z$ \\
+$\therefore \sqrt{2} \notin Q$
+
+\subsection{1.2 \#12}
+Assume P(n): $\frac{1}{n!} > \frac{8^{n}}{(2n)!} \forall n \ge 6$ \\aj
+$n \ge 6$ can be determined by brute force, showing that any $n < 6$ fails the basis step \\
+\\
+Basis Step: $12! = 479001600 > 8^{6} = 262144 > 6! = 720$ so \\
+$\frac{1}{6!} > \frac{8^{6}}{(2(6))!}$ is true. \\
+\\
+Inductive Step: Assume $\frac{1}{n!} > \frac{8^{n}}{(2n)!}$  $\forall n \ge 6$ \\
+Consider $\frac{1}{(n+1)!} > \frac{8^{n+1}}{(2(n+1)!)}$ \\
+$LHS = $ $\frac{1}{(n+1)n!}$ \\ 
+$RHS =$ $\frac{8^{n+1}}{(2(n+2))!} = \frac{8 \cdot 8^{n}}{(2n+2)(2n+1)(2n)!} (\frac{8}{(2n+2)(2n+1)})\frac{8^{n}}{(2n)!}$ \\
+$LHS \cdot (2n+1)(2n+2) = (\frac{(2n+2)(2n+1)}{n+1})\frac{1}{(n)!}$ \\
+$RHS \cdot (2n+1)(2n+2) = (8) \frac{8^{n}}{(2n)!}$ \\
+$n \ge 6 \implies \frac{(2n+2)(2n+1)}{n+1} \ge 24 \implies \frac{(2n+2)(2n+1)}{n+1} > 8$ \\
+ $\frac{(2n+2)(2n+1)}{n+1} > 8$ and $\frac{1}{n!} > \frac{8^{n}}{(2n)!} \forall n \ge 6 \implies$ \\
+$(\frac{(2n+2)(2n+1)}{n+1})\frac{1}{(n+1)!} > (8) \frac{8^{n}}{(2n)!} $  $\forall n \ge 6$ \\
+$\therefore \frac{1}{n!} > \frac{8^{n}}{(2n)!} \implies \frac{1}{(n+1)!} > \frac{8^{n+1}}{(2(n+1)!)}$  $\forall n \ge 6$
+
+\subsection{1.3 \#9}
+\subsubsection{(a)}
+let ($S_{1}, S_{2}, ... , S_{n}) s.t.$ $ n < \infty$ be a n-tuple where each $S_{i}$ is a closed set bounded by $[a_{i}, b_{i}]$ \\
+$\exists$ some $S_{i} s.t. a_{i} = a_{min} \le$ every other $a_{i}$ \\
+$\exists$ some $S_{i} s.t. b_{i} = b_{max} \ge$ every other $b_{i}$ \\
+$S_{1} \cup \dots \cup S_{n}  = [a_{min}, b_{max}]$
+\subsubsection{(b)}
+$S_{n} = [\frac{1}{n}, 1]$ \\
+$S_{1} \cup \dots \cup S_{n} = (0, 1]$
+
+\end{document}

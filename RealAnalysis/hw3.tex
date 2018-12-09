@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\begin{document}
+\pagestyle{plain}
+
+\title{Math 545: Real Analysis}
+\author{John DeSalvo}
+\maketitle
+
+\tableofcontents
+
+\section{Homework \#3}
+\subsection{2.3 \#4.b}
+$f(x) = \begin{cases}
+	p(x), & a < x \le c \\
+	q(x), & c < x < b
+\end{cases}$ \\
+where $p$ is continuous on $(a, c]$ and differentiable on $(a, c)$ \\
+and $q$ is continuous on $[c, b)$ and differentiable on $(c, b)$ \\
+For $f'(c)$ to exist, $f$ must be both continuous and differentiable at $c$. \\ 
+Therefore, the conditions: \begin{enumerate}
+	\item $f(c) = p(c) = q(c)$
+	\item $f'(c) = p'_{-}(c) = q'_{+}(c)$
+\end{enumerate} must be satisifed. \\
+\textbf{Proof:} For the first condition, suppose $p(c) \ne q(c)$ \\ 
+$f$ would not be continuous at $f(c)$ (intuitively there would be some vertical gap between $p(c)$ and $q(c)$ in the graph of $f(x)$) and therefore not differentiable at $f(c)$ (since if a function is differentiable at a point, it is also continuous at that point) \\
+Therefore, if $\exists f'(c)$ then $p(c) = q(c)$ \\
+For the second condition, we know that $p'_{-}(c)$ exists since $f$ is differentiable on $(a, c)$ and that $q'_{+}(c)$ exists since $f$ is differentiable on $(b, c)$. \\
+But suppose that $p'_{-}(c) \ne q'_{+}(c)$ \\
+The limits $lim_{x \to c^{+}}$ and $lim_{x \to x^{-}}$ of $\frac{f(x)-f(c)}{x-c}$ would not be equal. \\
+This implies that $lim_{x \to c} \frac{f(x)-f(c)}{x-c}$ would not exist, i.e. $\nexists f'(c)$ \\
+Therefore, if $\exists f'(c)$ then $p'_{-}(c) = q'_{+}(c)$
+\subsection{2.3 \#6}
+Given $\exists f'(0)$ and $\forall x,y$ $f(x+y) = f(x)f(y)$ \\
+$f(0) = f(0+0) = f(0)f(0) = f(0)^{2}$ \\
+For $x \in R$, if $f(x) = f(x)^{2}$ then $f(x) = 0$ or $f(x) = 1$ \\
+\textbf{Case 1:} If $f'(0) = 1$ then $f'(0) = lim_{h \to 0} \frac{f(h)-1}{h-0}$ \\
+$f'(x) = lim_{h \to 0} \frac{f(x+h)-f(x)}{h} = \frac{f(x)f(h)-f(x)}{h} = f(x) \frac{f(h)-1}{h} = f(x)f'(0)$ \\
+Therefore, $f'(x) = f(x)f'(0)$ exists, i.e. $\exists f'$ $\forall x$ \\
+\textbf{Case:2} If $f(0) = 0$ then $f(x) = f(x+0) = 0f(x) \forall x \in R$ \\
+Therefore, $\exists f'$ $\forall x$
+\end{document}
+
+
